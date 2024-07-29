@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASCII Renderer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <canvas class="canvas" id="canvas1"></canvas>
+      <div class="controls">
+        <button id="loadFileButton">Load a File</button>
+        <input
+          style="display: none"
+          type="file"
+          id="file"
+          onchange="loadImageFromFile();"
+          accept=".jpg,.jpeg,.png,.bmp"
+        />
+        <label for="resolution" id="resolutionLabel">Resolution 8 px:</label>
+        <input
+          type="range"
+          name="resolution"
+          id="resolution"
+          min="1"
+          max="20"
+          value="8"
+        />
+        <button id="downloadButton">Download</button>
+      </div>
+    </div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
